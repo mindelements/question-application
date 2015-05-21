@@ -157,6 +157,9 @@ question-application/tree/master/question-web/src/main/webapp
 
 4. You dont have to setup a local web server on your desktop. Just clone the project using github for windows and commit once you're done. The build will run automatically.
 
+5. You have to create a design that will make this application usable in both mobile and desktop. 
+
+
 
 
 Other Old Notes
