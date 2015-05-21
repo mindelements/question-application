@@ -1,4 +1,18 @@
-Question App
+
+Question App Overview
+===========
+
+This application would allow you upload an excel file, sample is provided on this link https://jboss7-undersun.rhcloud.com/question/welcome 
+
+The excel file is collection of question with corresponding answer and answer selection and explanation.
+The will allow the user to memorize the answer for a specific question because the question is asked twice by default. 
+For example, in order to pass or finish 1 question, the user has to answer it twice. If he answer it correctly at first, and wrong at second, then it will start again to ask it twice.
+
+This tool allow the user to memorize the answer for certain questions. 
+
+By default, it has a queue for 8 questions, after the questions have been asked, if there are wrong answer selected, the user will be presented a screen to review the wrong answers. After this, it will start asking the question again. For example, if you have 16 questions, you will be asked 32 questions if you have answered all the question perfectly.
+
+If not, the user will be stuck until the user memorized all the term.
 
 
 Demo
@@ -71,12 +85,54 @@ On the bottom of the question and answer selection, you will have two button.
 
 [Check Answer] [Next Question]
 
+3. The chek answer button would call the angular script that will call the checkanswer ajax
+
+You will need to pass here the generated member number and the sessionId 
+
+https://qa1-mindelements.rhcloud.com/question-web/rest/questions/checkAnswer/{answer}/{sessionId}/{questionNumber}
+
+The answer is also listed on the response from above, the answer should a or b or c ,etc for single question type. For question type that is 'multi', the answer should be delimited by comma, i.e. a,b,c or a,c
+
+Below is the sample response. You should have to show it so that user can see it clearly.
+
+{"answer":"Answer is correct"}
+
+The user will not be able to click the Next Button question until Check Answer button is clicked.
+
+4. Next Question button logic. Call the getNextQuestion api call
+
+https://qa1-mindelements.rhcloud.com/question-web/rest/questions/getNextQuestion/1111/d26fc144-0468-4f43-bfd5-8c19617e0bfb
+
+For this call, you only need to send the sessionId and the generated member number. You should get a same signature response. Remove the old question and answer from UI, and replace with this new question that you will get from this api call.
+
+5. Do the same logic on item 3.
+
+6. Try to use this demo on how things work until finishing up all question. https://jboss7-undersun.rhcloud.com/question/welcome
+
+You have to take care of the status. If the status is saying no question available, then you should call the getWrongAnswer.
+
+
+Sample:
+
+https://qa1-mindelements.rhcloud.com/question-web/rest/questions/getWrongAnswer/1111/d26fc144-0468-4f43-bfd5-8c19617e0bfb
+
+```
+{"question":"","selection":{},"questionNumber":10,"sessionId":"d26fc144-0468-4f43-bfd5-8c19617e0bfb","answer":"NA","explanation":"NA","questionBucketDetails":{"questionNumber":10,"totalQuestionRunningValue":0,"totalQuestion":10,"numberOfSetsDone":1,"questionSetRunningValue":1,"questionSetTotalValue":8},"status":"STATUS_NULL_QUESTIONS_NOT_ANSWERED"}
+```
+
+Create a button here, [Review Answer] With this button, you would call getWrongAnswer until it is finish. Once done, you should see a different status. You should then call the getNextQuestion API again.
+
+You should show the answer value and the explanation here. Try the demo. https://jboss7-undersun.rhcloud.com/question/welcome
+
+The reason that we are showing the wrong answer is to show to the user the correct answer and its explanation.
+
+8. This will be same process until all questions are finished. 
 
 
 
 
-
-
+Other Notes
+==========
 
 Main page
 
