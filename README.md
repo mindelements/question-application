@@ -2,11 +2,13 @@
 Question App Overview
 ===========
 
-This application would allow you upload an excel file, sample is provided on this link https://jboss7-undersun.rhcloud.com/question/welcome 
+This application would allow you to upload an excel file, sample is provided on this link https://jboss7-undersun.rhcloud.com/question/welcome 
 
-The excel file is collection of question with corresponding answer and answer selection and explanation.
-The will allow the user to memorize the answer for a specific question because the question is asked twice by default. 
-For example, in order to pass or finish 1 question, the user has to answer it twice. If he answer it correctly at first, and wrong at second, then it will start again to ask it twice.
+The excel file is a collection of questions with the corresponding answer, answer selections and explanation.
+
+The purpose of this application is to allow the user to memorize the answer for a specific question because the question is being prompted twice by default. 
+
+For example, in order to pass or finish 1 question, the user has to answer it twice. If the user answers it correctly at first try, and wrong at second, then the logic will ask the question twice again.
 
 This tool allow the user to memorize the answer for certain questions. 
 
