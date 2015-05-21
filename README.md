@@ -14,14 +14,18 @@ This tool allow the user to memorize the answer for certain questions.
 
 By default, it has a queue for 8 questions, after the questions have been asked, if there are wrong answer selected, the user will be presented a screen to review the wrong answers. After this, it will start asking the question again. For example, if you have 16 questions, you will be asked 32 questions if you have answered all the question perfectly.
 
-If not, the user will be stuck until the user memorized all the term.
+If not, the user will be stuck until the user have memorized all the answer.
 
 
 Demo
 =====
+
+Try the demo to get a feel of how it worked. The demo is plain version of the application without the use of rest api as it is mostly done in jsp.
+
 https://jboss7-undersun.rhcloud.com/question/welcome
 
-How It Should Work
+
+How It Should Work using AngularJS
 ======
 
 1. Create a default page i.e. start.html
