@@ -1,5 +1,4 @@
-# mindelements-question-app
-mindelements-question-app
+Quesiton App
 
 Main page
 * https://qa1-mindelements.rhcloud.com/question-web/
