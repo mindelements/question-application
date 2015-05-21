@@ -126,12 +126,40 @@ You should show the answer value and the explanation here. Try the demo. https:/
 
 The reason that we are showing the wrong answer is to show to the user the correct answer and its explanation.
 
+
 8. This will be same process until all questions are finished. 
 
 
+Development
+
+=============
+
+1. To be able to call the rest api, you should be creating your angular ajax script on this location
 
 
-Other Notes
+question-application/tree/master/question-web/src/main/webapp
+
+Clone the application from here:
+
+https://github.com/mindelements/question-application
+
+2. If you dont know how to run this applicaton on eclipse, then I can provide access to github so that you can commit your code directly on github, and it will get deployed automatically on the server. Around 15-30 seconds.
+
+You will see your output on this location after deployment
+
+https://qa1-mindelements.rhcloud.com/mindelements-question-web/
+
+I recommend you to signup to github so that I can enable your account on this project.
+
+3. Look at the sample index.html and index2.html on this location:
+
+question-application/tree/master/question-web/src/main/webapp
+
+4. You dont have to setup a local web server on your desktop. Just clone the project using github for windows and commit once you're done. The build will run automatically.
+
+
+
+Other Old Notes
 ==========
 
 Main page
