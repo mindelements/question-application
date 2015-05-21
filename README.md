@@ -165,7 +165,7 @@ question-application/tree/master/question-web/src/main/webapp
 
 5. You have to create a design that will make this application usable in both mobile and desktop. 
 
-
+6. If you know how to fork this project, that will be great. Fork it and create your change in your project and just send a pull request.
 
 
 Other Old Notes
