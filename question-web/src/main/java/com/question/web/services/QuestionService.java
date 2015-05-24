@@ -17,6 +17,7 @@ public class QuestionService {
 
 	private Webservices service = null;
 
+	//final String baseUrl = "http://localhost:8080/question-rest";
 	final String baseUrl = "https://portal-mindelements.rhcloud.com/question-rest";
 	
 	@PostConstruct
@@ -25,6 +26,17 @@ public class QuestionService {
 				.println("QuestionService-web Init method after properties are set");
 
 		service = WebservicesFactory.getInstance(WebservicesType.JERSEY_REST_CLIENT);
+
+//		String jsonString = service.get("http://localhost:8080/question-rest/rest/questions/getFirstQuestion/1",
+//				String.class);
+//		System.out.println(jsonString);
+//
+//		QuestionBucket questionBucketStr = service.get("http://localhost:8080/question-rest/rest/questions/getFirstQuestion/1",
+//				QuestionBucket.class);
+//		System.out.println(questionBucketStr);
+		
+		
+
 
 	}
 

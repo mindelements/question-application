@@ -2,7 +2,7 @@
 Question App Overview
 ===========
 
-This application would allow you to upload an excel file, sample is provided on this link https://jboss7-undersun.rhcloud.com/question/welcome 
+This application would allow you to upload an excel file, sample is provided on this link https://portal-mindelements.rhcloud.com/question-web/ 
 
 The excel file is a collection of questions with the corresponding answer, answer selections and explanation.
 
@@ -22,7 +22,7 @@ Demo
 
 Try the demo to get a feel of how it worked. The demo is plain version of the application without the use of rest api as it is mostly done in jsp.
 
-https://jboss7-undersun.rhcloud.com/question/welcome
+https://portal-mindelements.rhcloud.com/question-web/
 
 
 How It Should Work using AngularJS
@@ -113,7 +113,7 @@ For this call, you only need to send the sessionId and the generated member numb
 
 5. Do the same logic on item 3.
 
-6. Try to use this demo on how things work until finishing up all question. https://jboss7-undersun.rhcloud.com/question/welcome
+6. Try to use this demo on how things work until finishing up all question. https://portal-mindelements.rhcloud.com/question-web/
 
 You have to take care of the status. If the status is saying no question available, then you should call the getWrongAnswer.
 
@@ -128,7 +128,7 @@ https://qa1-mindelements.rhcloud.com/question-web/rest/questions/getWrongAnswer/
 
 Create a button here, [Review Answer] With this button, you would call getWrongAnswer until it is finish. Once done, you should see a different status. You should then call the getNextQuestion API again.
 
-You should show the answer value and the explanation here. Try the demo. https://jboss7-undersun.rhcloud.com/question/welcome
+You should show the answer value and the explanation here. Try the demo. https://portal-mindelements.rhcloud.com/question-web/
 
 The reason that we are showing the wrong answer is to show to the user the correct answer and its explanation.
 
