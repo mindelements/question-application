@@ -5,7 +5,7 @@
 <html lang="en">
 <body>
 <br/><br/>
-Please find below tools::
+Please find below tools:::
 <ul>
 <li><a href="${pageContext.request.contextPath}/app/question/welcome">Memorize</href>
 <li><a href="${pageContext.request.contextPath}/app/quiz/welcome">Practice Question</href>
