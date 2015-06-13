@@ -60,7 +60,7 @@
         <div class="clear"></div>
         
         <footer>
-        	Copyright © 2015
+        	Copyright &copy; 2015
         </footer>
     </section>
 </div>	
