@@ -307,7 +307,7 @@
 	background: #666;
 	border: 0;
 	padding: 14px 18px;
-	font-size: 18px;
+	font-size: 13px;
 	cursor: pointer;
 	color: #fff;
 	border-radius: 2px;
@@ -360,7 +360,7 @@
 	background-color: #999
 }
 .ladda-button[data-size=xs] {
-	padding: 4px 8px
+	padding: 7px 12px
 }
 .ladda-button[data-size=xs] .ladda-label {
 	font-size: 0.7em
