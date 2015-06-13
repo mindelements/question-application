@@ -1,7 +1,12 @@
+<!DOCTYPE html>
+<html lang="en-US">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set value="${pageContext.request.contextPath}/app/question" var="questionMvcUrl" />
 <c:set value="${pageContext.request.contextPath}/resources" var="resourcesUrl" />
-<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MindElements</title>
 <head>
 <link rel="stylesheet" href="${resourcesUrl}/css/style.css" type="text/css" />
 <link rel="stylesheet" href="${resourcesUrl}/css/demo.css" type="text/css"/>
@@ -55,7 +60,7 @@
         <div class="clear"></div>
         
         <footer>
-        	Copyright © 2015
+        	Copyright Â© 2015
         </footer>
     </section>
 </div>	
