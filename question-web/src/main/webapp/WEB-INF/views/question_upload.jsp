@@ -3,6 +3,9 @@
 <c:set value="${pageContext.request.contextPath}/resources" var="resourcesUrl" />
 <html>
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MindElements</title>
 <link rel="stylesheet" href="${resourcesUrl}/css/style.css" type="text/css" />
 <link rel="stylesheet" href="${resourcesUrl}/css/demo.css" type="text/css"/>
 <link rel="stylesheet" href="${resourcesUrl}/css/fm.checkator.jquery.css" type="text/css"/>
@@ -74,12 +77,12 @@
             <input type="hidden" id="number" name="number" value="${question.questionNumber}">	
             <input type="hidden" id="memberNumber" name="memberNumber" value="${memberNumber}">	
             <h1 class="pageTitle">${message}</h1>
-            <h1 class="pageTitle">QuestionCode# : ${question.questionNumber} 
-            totalQuestionRunningValue# : ${question.questionBucketDetails.totalQuestionRunningValue} 
-            totalQuestion# : ${question.questionBucketDetails.totalQuestion}
-            numberOfSetsDone# : ${question.questionBucketDetails.numberOfSetsDone} 
-            questionSetRunningValue# : ${question.questionBucketDetails.questionSetRunningValue}
-            questionSetTotalValue# : ${question.questionBucketDetails.questionSetTotalValue} </h1>
+            <p>QuestionCode# : ${question.questionNumber}</p>
+            <p>totalQuestionRunningValue# : ${question.questionBucketDetails.totalQuestionRunningValue} </p>
+            <p>totalQuestion# : ${question.questionBucketDetails.totalQuestion}</p>
+            <p>numberOfSetsDone# : ${question.questionBucketDetails.numberOfSetsDone} </p>
+            <p>questionSetRunningValue# : ${question.questionBucketDetails.questionSetRunningValue}</p>
+            <p>questionSetTotalValue# : ${question.questionBucketDetails.questionSetTotalValue}</p>
             <div class="questionsSec marginTop10">
             	<div class="blockDiv">
                 
@@ -124,7 +127,7 @@
         <div class="clear"></div>
         
         <footer>
-        	Copyright © 2015
+        	Copyright Â© 2015
         </footer>
     </section>
 </div>
