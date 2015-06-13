@@ -101,3 +101,5 @@ ul.arrowList li:hover { background-color:#f6f6f6; transition:all ease 0.2s; }
 .paddingTop50 { padding-top:50px; }
 
 .inBlock { display:inline-block; }
+
+.uploadSec input[typ="file"] { width:0px; }
