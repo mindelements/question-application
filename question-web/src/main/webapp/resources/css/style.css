@@ -95,11 +95,9 @@ ul.arrowList li:hover { background-color:#f6f6f6; transition:all ease 0.2s; }
 .queOne ul li { display:block; margin-top:5px; }
 .queOne ul li lable { float:left !important; }
 
-.fileField input[type="file"] { opacity:0; position:absolute; }
+.fileField input[type="file"] { width:0px; opacity:0; position:absolute; }
 .fileField label { width:100%; display:block; line-height:30px; border-radius:3px; background:#02789b; font-size:16px; color:#fff; text-align:center; }
 
 .paddingTop50 { padding-top:50px; }
 
 .inBlock { display:inline-block; }
-
-.uploadSec input[typ="file"] { width:0px; }
