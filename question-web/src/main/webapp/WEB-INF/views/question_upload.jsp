@@ -13,9 +13,6 @@
 <link rel="stylesheet" href="${resourcesUrl}/css/ladda.min.css" type="text/css" />
 <link rel="stylesheet" href="${resourcesUrl}/css/responsive.css" type="text/css" />
 
-<script src="${resourcesUrl}/js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="${resourcesUrl}/js/jquery.validate.js"></script>
-<script type="text/javascript">var vlid = $.noConflict();vlid(document).ready(function(){vlid("#validateForm").validate();});</script>
 <script src="${resourcesUrl}/jquery-1.11.1.min.js"></script>
 <script src="${resourcesUrl}/js/functions.js"></script>
 <script src="${resourcesUrl}/js/jquery.mCustomScrollbar.concat.min.js"></script>
