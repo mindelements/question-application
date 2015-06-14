@@ -37,16 +37,16 @@
             <h3>Message : ${message}</h3>
             <div id="inline_content"></div>
             
-            <form method="POST" enctype="multipart/form-data" action="${questionMvcUrl}/upload">
+            <form method="POST" enctype="multipart/form-data" action="${questionMvcUrl}/upload" id="validateForm">
             <div class="uploadSec marginTop10">
             	
             	<div class="blockDiv">
                 	<div class="width50P floatLeft lineHeight30">File to upload:</div>
-                    <div class="width50P floatLeft fileField"><input name="file" type="file" id="file-select"><label for="file-select">Select File</label></div>
+                    <div class="width50P floatLeft fileField"><input name="file" type="file" class="required" id="file-select"><label for="file-select">Select File</label></div>
                     <div class="clear"></div>
                     
                     <div class="width50P floatLeft lineHeight30 marginTop10">Member Number:</div>
-                    <div class="width50P floatLeft marginTop10"><input type="text" name="memberNumber" value="1234"></div>
+                    <div class="width50P floatLeft marginTop10"><input type="text" class="required" name="memberNumber" value="1234"></div>
                     <div class="clear"></div>
                 </div>
             </div>
