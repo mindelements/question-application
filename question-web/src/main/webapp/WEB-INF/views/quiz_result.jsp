@@ -44,7 +44,7 @@
             <h1 class="pageTitle">Results</h1>
             <div class="uploadSec marginTop10">
             	<div class="blockDiv" id="inline_content">
-                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="result-tbl">
                     <c:set var="counter" value="0" scope="page" />
                     <c:set var="counterCorrect" value="0" scope="page" />
                     <c:forEach items="${questionBucketList}" var="element" varStatus="status"> 
@@ -84,7 +84,7 @@
                     </table>
                 </div>
             </div>
-            <div class="blockDiv paddingTop50">
+            <div class="blockDiv paddingTop50 fontBold">
             	<h3>Summary</h3>
                 <p> Total Correct Answer: ${counterCorrect}</p>
                 <p>Total Question: ${counter}</p>
