@@ -55,12 +55,12 @@
                 <input type="hidden" id="number" name="number" value="${question.questionNumber}">	
                 <input type="hidden" id="memberNumber" name="memberNumber" value="${memberNumber}">
             <h1 class="pageTitle">${message}</h1>
-            <h1 class="pageTitle">QuestionCode# : ${question.questionNumber} 
-            totalQuestionRunningValue# : ${question.questionBucketDetails.totalQuestionRunningValue} 
-            totalQuestion# : ${question.questionBucketDetails.totalQuestion}
-            numberOfSetsDone# : ${question.questionBucketDetails.numberOfSetsDone} 
-            questionSetRunningValue# : ${question.questionBucketDetails.questionSetRunningValue}
-            questionSetTotalValue# : ${question.questionBucketDetails.questionSetTotalValue}</h1>
+            <p>QuestionCode# : ${question.questionNumber} </p>
+            <p>totalQuestionRunningValue# : ${question.questionBucketDetails.totalQuestionRunningValue} </p>
+            <p>totalQuestion# : ${question.questionBucketDetails.totalQuestion}</p>
+            <p>numberOfSetsDone# : ${question.questionBucketDetails.numberOfSetsDone} </p>
+            <p>questionSetRunningValue# : ${question.questionBucketDetails.questionSetRunningValue}</p>
+            <p>questionSetTotalValue# : ${question.questionBucketDetails.questionSetTotalValue}</p>
             
             <div class="uploadSec marginTop10">
             	
