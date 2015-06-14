@@ -15,16 +15,19 @@
 <link rel="stylesheet" href="${resourcesUrl}/css/ladda.min.css" type="text/css" />
 <link rel="stylesheet" href="${resourcesUrl}/css/responsive.css" type="text/css" />
 
+<script src="${resourcesUrl}/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="${resourcesUrl}/js/jquery.validate.js"></script>
+<script type="text/javascript">
+var vlid = $.noConflict();vlid(document).ready(function(){
+vlid("#validateForm").submit(function(){if(vlid('#file-select').val()==""){ vlid('#file-select-lbl').addClass('vlid-file');return false;} });
+vlid("#validateForm").validate();
+});</script>
 <script src="${resourcesUrl}/jquery-1.11.1.min.js"></script>
 <script src="${resourcesUrl}/js/functions.js"></script>
 <script src="${resourcesUrl}/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="${resourcesUrl}/js/fm.checkator.jquery.js"></script>
 <script src="${resourcesUrl}/js/ladda.min.js"></script>
 <script src="${resourcesUrl}/js/spin.min.js"></script>
-
-<script src="${resourcesUrl}/js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="${resourcesUrl}/js/jquery.validate.js"></script>
-<script type="text/javascript">var vlid = $.noConflict();vlid(document).ready(function(){vlid("#validateForm").validate();});</script>
 </head>
 <body>
 
@@ -43,7 +46,7 @@
             <div class="uploadSec marginTop10">
             	<div class="blockDiv">
                 	<div class="width50P floatLeft lineHeight30">File to upload:</div>
-                    <div class="width50P floatLeft fileField"><input type="file" class="required" name="file" id="file-select"><label for="file-select">Select File</label></div>
+                    <div class="width50P floatLeft fileField"><input type="file" class="required" name="file" id="file-select"><label for="file-select" id="file-select-lbl">Select File</label></div>
                     <div class="clear"></div>
                     
                     <div class="width50P floatLeft lineHeight30 marginTop10">Member Number:</div>
@@ -67,6 +70,43 @@
         	Copyright &copy; 2015
         </footer>
     </section>
-</div>	
+</div>
+<link rel="stylesheet" href="${resourcesUrl}/css/ladda.min.css">
+<script src="${resourcesUrl}/js/spin.min.js"></script> 
+<script src="${resourcesUrl}/js/ladda.min.js"></script> 
+<script>
+	Ladda.bind( '.button-demo button', { timeout: 2000 } );
+
+	Ladda.bind( '.progress-demo button', {
+		callback: function( instance ) {
+			var progress = 0;
+			var interval = setInterval( function() {
+				progress = Math.min( progress + Math.random() * 0.1, 1 );
+				instance.setProgress( progress );
+
+				if( progress === 1 ) {
+					instance.stop();
+					clearInterval( interval );
+				}
+			}, 200 );
+		}
+	} );
+	
+	$(function () {
+		$('.radio1, .radio2, .checkbox1, .checkbox2').checkator();
+	
+	
+		$('#activate_checkator1').click(function () {
+			if ($('#radio1_1').data('checkator') === undefined) {
+				$('.radio1').checkator();
+				$('#activate_checkator1').val('destroy checkator');
+			} else {
+				$('.radio1').checkator('destroy');
+				$('#activate_checkator1').val('activate checkator');
+			}
+		});
+	
+	});
+</script>
 </body>
 </html>
