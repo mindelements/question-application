@@ -35,6 +35,9 @@ img {
 	border:none;
 }
 
+a { color:#19B698; text-decoration:none; }
+a:hover { text-decoration:underline; }
+
 .clear { clear:both; }
 
 .layout {
