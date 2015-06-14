@@ -16,7 +16,11 @@
 
 <script src="${resourcesUrl}/js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="${resourcesUrl}/js/jquery.validate.js"></script>
-<script type="text/javascript">var vlid = $.noConflict();vlid(document).ready(function(){vlid("#validateForm").validate();});</script>
+<script type="text/javascript">
+var vlid = $.noConflict();vlid(document).ready(function(){
+vlid("#validateForm").submit(function(){if(vlid('#file-select').val()==""){ vlid('#file-select-lbl').addClass('vlid-file');return false;} });
+vlid("#validateForm").validate();
+});</script>
 <script src="${resourcesUrl}/jquery-1.11.1.min.js"></script>
 <script src="${resourcesUrl}/js/functions.js"></script>
 <script src="${resourcesUrl}/js/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -42,7 +46,7 @@
             	
             	<div class="blockDiv">
                 	<div class="width50P floatLeft lineHeight30">File to upload:</div>
-                    <div class="width50P floatLeft fileField"><input name="file" type="file" class="required" id="file-select"><label for="file-select">Select File</label></div>
+                    <div class="width50P floatLeft fileField"><input name="file" type="file" class="required" id="file-select"><label for="file-select" id="file-select-lbl">Select File</label></div>
                     <div class="clear"></div>
                     
                     <div class="width50P floatLeft lineHeight30 marginTop10">Member Number:</div>
