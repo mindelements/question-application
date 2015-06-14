@@ -31,12 +31,12 @@
 	<section class="pageContent">
     	
         <div class="container">
+        <form method="POST" enctype="multipart/form-data" action="${questionMvcUrl}/upload">
             <h1 class="pageTitle">Memorize question tool</h1>
             <input type="hidden" id="questionMvcUrl" value="${questionMvcUrl}" />
             <h3>Message : ${message}</h3>
             <div id="inline_content"></div>
             <div class="uploadSec marginTop10">
-            	<form method="POST" enctype="multipart/form-data" action="${questionMvcUrl}/upload">
             	<div class="blockDiv">
                 	<div class="width50P floatLeft lineHeight30">File to upload:</div>
                     <div class="width50P floatLeft fileField"><input type="file" name="file" id="file-select"><label for="file-select">Select File</label></div>
@@ -46,7 +46,6 @@
                     <div class="width50P floatLeft marginTop10"><input type="text" name="memberNumber" value="1234"></div>
                     <div class="clear"></div>
                 </div>
-                </form>
             </div>
             <div class="button-demo marginTop10"><div class="progress-demo textCenter"><button type="submit" class="ladda-button" data-color="mint" data-style="expand-right" data-size="xs">Upload</button></div></div>
             
@@ -56,6 +55,7 @@
                 <p><a href="/question-web/resources/sample.xlsx">sample.xlsx</a></p>
                 <p><a href="/question-web/resources/sample-multi.xlsx">sample-multi.xlsx</a></p>
             </div>
+        </form>
         </div>
         <div class="clear"></div>
         
