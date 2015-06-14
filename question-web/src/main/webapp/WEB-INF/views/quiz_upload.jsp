@@ -130,6 +130,42 @@
         </footer>
     </section>
 </div>
+<link rel="stylesheet" href="${resourcesUrl}/css/ladda.min.css">
+<script src="${resourcesUrl}/js/spin.min.js"></script> 
+<script src="${resourcesUrl}/js/ladda.min.js"></script> 
+<script>
+	Ladda.bind( '.button-demo button', { timeout: 2000 } );
 
+	Ladda.bind( '.progress-demo button', {
+		callback: function( instance ) {
+			var progress = 0;
+			var interval = setInterval( function() {
+				progress = Math.min( progress + Math.random() * 0.1, 1 );
+				instance.setProgress( progress );
+
+				if( progress === 1 ) {
+					instance.stop();
+					clearInterval( interval );
+				}
+			}, 200 );
+		}
+	} );
+	
+	$(function () {
+		$('.radio1, .radio2, .checkbox1, .checkbox2').checkator();
+	
+	
+		$('#activate_checkator1').click(function () {
+			if ($('#radio1_1').data('checkator') === undefined) {
+				$('.radio1').checkator();
+				$('#activate_checkator1').val('destroy checkator');
+			} else {
+				$('.radio1').checkator('destroy');
+				$('#activate_checkator1').val('activate checkator');
+			}
+		});
+	
+	});
+</script>
 </body>
 </html>
