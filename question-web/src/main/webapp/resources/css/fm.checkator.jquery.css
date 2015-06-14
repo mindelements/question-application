@@ -77,4 +77,4 @@ input[type=checkbox] {
 	height: 15px;
 }
 
-.checkator_holder { float:left !important; margin-top:3px !important; margin-right:5px !important; }
+.checkator_holder { float:left !important; margin-right:5px !important; }
