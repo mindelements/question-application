@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-US">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set value="${pageContext.request.contextPath}/app/question" var="questionMvcUrl" />
 <c:set value="${pageContext.request.contextPath}/resources" var="resourcesUrl" />
+<html>
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>MindElements</title>
-<head>
 <link rel="stylesheet" href="${resourcesUrl}/css/style.css" type="text/css" />
 <link rel="stylesheet" href="${resourcesUrl}/css/demo.css" type="text/css"/>
 <link rel="stylesheet" href="${resourcesUrl}/css/fm.checkator.jquery.css" type="text/css"/>
@@ -26,39 +24,108 @@
 <script src="${resourcesUrl}/js/spin.min.js"></script>
 </head>
 <body>
-
-<div class="layout">
+<div class="layout" id="scroller">
 	<header>
     	<img src="${resourcesUrl}/images/logo.png" alt="Mind Elements">
     </header>
 	<section class="pageContent">
-    	
-        <div class="container">
-        <form method="POST" enctype="multipart/form-data" action="${questionMvcUrl}/upload" id="validateForm">
-            <h1 class="pageTitle">Memorize question tool</h1>
-            <input type="hidden" id="questionMvcUrl" value="${questionMvcUrl}" />
-            <h3>Message : ${message}</h3>
-            <div id="inline_content"></div>
-            <div class="uploadSec marginTop10">
-            	<div class="blockDiv">
-                	<div class="width50P floatLeft lineHeight30">File to upload:</div>
-                    <div class="width50P floatLeft fileField"><input type="file" class="required" name="file" id="file-select"><label for="file-select">Select File</label></div>
-                    <div class="clear"></div>
+    	<input type="hidden" id="questionMvcUrl" value="${questionMvcUrl}" /> 
+		  <script>
+          $(document).ready(function() {
+              $("#checkAnswer").click(function(){
+                  
+                  $("#showStatus").text("");
+                  
+                  var questionMvcUrl = $('input#questionMvcUrl').val();		  
+                  var sessionId = $('input#sessionId').val();
+                  var number = $('input#number').val();
+                  var memberNumber = $('input#memberNumber').val();
+                  
+                  var finalAns = '';
+                  
+                  var answer = $('input:radio[name=answer]:checked').val();
+                  
+                  var answerbox = $('input:checkbox[name=answerbox]:checked').val();
+                  
+                  if (typeof(answer) != 'undefined' && answer != null)
+                    {
+                        finalAns = answer;
+                    }
+        
+                    if (typeof(answerbox) != 'undefined' && answerbox != null)
+                    {
+                        finalAns = $("input:checkbox[name=answerbox]:checked").map(function() { return this.value; }).get().join(",");
+                        
+                    }
+                              
+                  
                     
-                    <div class="width50P floatLeft lineHeight30 marginTop10">Member Number:</div>
-                    <div class="width50P floatLeft marginTop10"><input type="text" name="memberNumber" class="required" value="1234"></div>
-                    <div class="clear"></div>
+                  var url = questionMvcUrl+"/check/"+number+"/"+finalAns+"/"+memberNumber+"/"+sessionId;	    
+                $.ajax({ // ajax call starts
+                      url: url, // JQuery loads serverside.php
+                      dataType: 'json', // Choosing a JSON datatype
+                      success: function(data) // Variable data contains the data we get from serverside
+                      {
+                          $("#showStatus").text(data.answer);
+                      }
+                  });
+                  return false; // keeps the page from not refreshing 
+                
+              });	  
+          });
+          </script>
+        <div class="container">
+        	<form method="get" id="validateForm" action="${questionMvcUrl}/next/${memberNumber}/${question.sessionId}">
+            <input type="hidden" id="sessionId" name="sessionId" value="${question.sessionId}">
+            <input type="hidden" id="number" name="number" value="${question.questionNumber}">	
+            <input type="hidden" id="memberNumber" name="memberNumber" value="${memberNumber}">	
+            <h1 class="pageTitle">${message}</h1>
+            <p>QuestionCode# : ${question.questionNumber}</p>
+            <p>totalQuestionRunningValue# : ${question.questionBucketDetails.totalQuestionRunningValue} </p>
+            <p>totalQuestion# : ${question.questionBucketDetails.totalQuestion}</p>
+            <p>numberOfSetsDone# : ${question.questionBucketDetails.numberOfSetsDone} </p>
+            <p>questionSetRunningValue# : ${question.questionBucketDetails.questionSetRunningValue}</p>
+            <p>questionSetTotalValue# : ${question.questionBucketDetails.questionSetTotalValue}</p>
+            <div class="questionsSec marginTop10">
+            	<div class="blockDiv">
+                
+                    <div class="queOne">
+                        <h2>Question : ${question.question}</h2>
+                        <div class="blockDiv paddingLeft20">
+                            <ul>
+                                <c:if test="${ question.questionType == 'single' }">
+                                    <c:forEach var="entry" items="${question.selection}">
+
+                                        <li><label><input name="answer" class="radio1" type="radio" value="<c:out value="${entry.key}" />"> <c:out value="${entry.value}" /></label><div class="clear"></div></li>
+
+                                    </c:forEach>
+                                </c:if>
+
+                                <c:if test="${ question.questionType == 'multi' }">
+                                    <c:forEach var="entry" items="${question.selection}">
+
+                                        <li><label><input type="checkbox" name="answerbox" class="checkbox1" value="<c:out value="${entry.key}" />"> <c:out value="${entry.value}" /></label><div class="clear"></div></li>
+
+                                    </c:forEach>
+                                </c:if>
+
+                                
+                                
+
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    
+                    
                 </div>
+                
+                <h3 id="showStatus"></h3>
+                <div class="button-demo inBlock marginTop10"><div class="progress-demo textCenter"><button class="ladda-button" data-color="mint" data-style="expand-right" data-size="xs" type="button" id="checkAnswer">Check Answer</button></div></div>
+                <div class="button-demo inBlock marginTop10"><div class="progress-demo textCenter"><button class="ladda-button" data-color="mint" data-style="expand-right" data-size="xs" type="submit" id="nextQuestion">Next Question</button></div></div>
+                
             </div>
-            <div class="button-demo marginTop10"><div class="progress-demo textCenter"><button type="submit" class="ladda-button" data-color="mint" data-style="expand-right" data-size="xs">Upload</button></div></div>
-            
-            <div class="blockDiv paddingTop50">
-            	<h3>Templates:</h3>
-                <p><a href="/question-web/resources/memorize-this.xlsx">memorize-this.xlsx</a></p>
-                <p><a href="/question-web/resources/sample.xlsx">sample.xlsx</a></p>
-                <p><a href="/question-web/resources/sample-multi.xlsx">sample-multi.xlsx</a></p>
-            </div>
-        </form>
+            </form>
         </div>
         <div class="clear"></div>
         
