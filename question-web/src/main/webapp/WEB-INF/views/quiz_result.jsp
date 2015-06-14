@@ -57,7 +57,7 @@
                                <td>
                             </c:when>
                             <c:otherwise>
-                                <td style="padding-left: 5px;color:red">	        
+                                <td style="color:red">
                             </c:otherwise>
                         </c:choose>	
                         <b>${status.count}. ${element.question}</b>
