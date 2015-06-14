@@ -9,6 +9,9 @@
 <meta http-equiv="expires" content="0" />
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MindElements</title>
 
 <link rel="stylesheet" href="${resourcesUrl}/css/style.css" type="text/css" />
 <link rel="stylesheet" href="${resourcesUrl}/css/demo.css" type="text/css"/>
@@ -92,7 +95,7 @@
         <div class="clear"></div>
         
         <footer>
-        	Copyright © 2015
+        	Copyright &copy; 2015
         </footer>
     </section>
 </div>
