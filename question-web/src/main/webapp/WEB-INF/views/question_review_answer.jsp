@@ -3,6 +3,9 @@
 <c:set value="${pageContext.request.contextPath}/resources" var="resourcesUrl" />
 <html>
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MindElements</title>
 <link rel="stylesheet" href="${resourcesUrl}/css/style.css" type="text/css" />
 <link rel="stylesheet" href="${resourcesUrl}/css/demo.css" type="text/css"/>
 <link rel="stylesheet" href="${resourcesUrl}/css/fm.checkator.jquery.css" type="text/css"/>
@@ -92,7 +95,7 @@
         <div class="clear"></div>
         
         <footer>
-        	Copyright © 2015
+        	Copyright &copy; 2015
         </footer>
     </section>
 </div>
