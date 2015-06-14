@@ -105,10 +105,11 @@ ul.arrowList li:hover { background-color:#f6f6f6; transition:all ease 0.2s; }
 
 label.error {display:none!important; margin:0; padding:0; height:0;}
 textarea.error, select.error, input.error{border:1px solid red!important;}
+.vlid-file { background:red !important; }
 
 table.result-tbl { border:1px solid #ccc; border-bottom:none; }
 table.result-tbl tr:nth-child(odd) { background-color:#FFFFFF; }
 table.result-tbl tr:nth-child(even) { background-color:#EEEEEE; }
-table.result-tbl tr td { border-bottom:1px solid #ccc; }
+table.result-tbl tr td { border-bottom:1px solid #ccc; padding:10px; }
 
 .fontBold { font-family: 'Calibri Bold'; }
