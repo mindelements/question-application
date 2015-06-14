@@ -14,6 +14,9 @@
 <link rel="stylesheet" href="${resourcesUrl}/css/ladda.min.css" type="text/css" />
 <link rel="stylesheet" href="${resourcesUrl}/css/responsive.css" type="text/css" />
 
+<script src="${resourcesUrl}/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="${resourcesUrl}/js/jquery.validate.js"></script>
+<script type="text/javascript">var vlid = $.noConflict();vlid(document).ready(function(){vlid("#validateForm").validate();});</script>
 <script src="${resourcesUrl}/jquery-1.11.1.min.js"></script>
 <script src="${resourcesUrl}/js/functions.js"></script>
 <script src="${resourcesUrl}/js/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -34,8 +37,9 @@
             <h3>Message : ${message}</h3>
             <div id="inline_content"></div>
             
+            <form method="POST" enctype="multipart/form-data" action="${questionMvcUrl}/upload">
             <div class="uploadSec marginTop10">
-            	<form method="POST" enctype="multipart/form-data" action="${questionMvcUrl}/upload">
+            	
             	<div class="blockDiv">
                 	<div class="width50P floatLeft lineHeight30">File to upload:</div>
                     <div class="width50P floatLeft fileField"><input name="file" type="file" id="file-select"><label for="file-select">Select File</label></div>
@@ -45,10 +49,9 @@
                     <div class="width50P floatLeft marginTop10"><input type="text" name="memberNumber" value="1234"></div>
                     <div class="clear"></div>
                 </div>
-                </form>
             </div>
             <div class="button-demo marginTop10"><div class="progress-demo textCenter"><button class="ladda-button" type="submit" data-color="mint" data-style="expand-right" data-size="xs">Upload</button></div></div>
-            
+            </form>
             <div class="blockDiv paddingTop50">
             	<h3>Templates:</h3>
                 <p><a href="/question-web/resources/memorize-this.xlsx">memorize-this.xlsx</a></p>
@@ -63,5 +66,42 @@
         </footer>
     </section>
 </div>
+<link rel="stylesheet" href="${resourcesUrl}/css/ladda.min.css">
+<script src="${resourcesUrl}/js/spin.min.js"></script> 
+<script src="${resourcesUrl}/js/ladda.min.js"></script> 
+<script>
+	Ladda.bind( '.button-demo button', { timeout: 2000 } );
+
+	Ladda.bind( '.progress-demo button', {
+		callback: function( instance ) {
+			var progress = 0;
+			var interval = setInterval( function() {
+				progress = Math.min( progress + Math.random() * 0.1, 1 );
+				instance.setProgress( progress );
+
+				if( progress === 1 ) {
+					instance.stop();
+					clearInterval( interval );
+				}
+			}, 200 );
+		}
+	} );
+	
+	$(function () {
+		$('.radio1, .radio2, .checkbox1, .checkbox2').checkator();
+	
+	
+		$('#activate_checkator1').click(function () {
+			if ($('#radio1_1').data('checkator') === undefined) {
+				$('.radio1').checkator();
+				$('#activate_checkator1').val('destroy checkator');
+			} else {
+				$('.radio1').checkator('destroy');
+				$('#activate_checkator1').val('activate checkator');
+			}
+		});
+	
+	});
+</script>
 </body>
 </html>
