@@ -19,6 +19,8 @@
 <script src="${resourcesUrl}/js/fm.checkator.jquery.js"></script>
 <script src="${resourcesUrl}/js/ladda.min.js"></script>
 <script src="${resourcesUrl}/js/spin.min.js"></script>
+<script src="${resourcesUrl}/jquery.validate.js"></script>
+<script type="text/javascript">jQuery(document).ready(function($){$("#validateForm").validate();});</script>
 </head>
 <body>
 <div class="layout" id="scroller">
@@ -72,7 +74,7 @@
           });
           </script>
         <div class="container">
-        	<form method="get" action="${questionMvcUrl}/next/${memberNumber}/${question.sessionId}">
+        	<form method="get" id="validateForm" action="${questionMvcUrl}/next/${memberNumber}/${question.sessionId}">
             <input type="hidden" id="sessionId" name="sessionId" value="${question.sessionId}">
             <input type="hidden" id="number" name="number" value="${question.questionNumber}">	
             <input type="hidden" id="memberNumber" name="memberNumber" value="${memberNumber}">	
@@ -127,7 +129,7 @@
         <div class="clear"></div>
         
         <footer>
-        	Copyright © 2015
+        	Copyright &copy; 2015
         </footer>
     </section>
 </div>
