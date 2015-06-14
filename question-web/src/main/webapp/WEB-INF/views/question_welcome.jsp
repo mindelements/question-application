@@ -21,6 +21,8 @@
 <script src="${resourcesUrl}/js/fm.checkator.jquery.js"></script>
 <script src="${resourcesUrl}/js/ladda.min.js"></script>
 <script src="${resourcesUrl}/js/spin.min.js"></script>
+<script src="${resourcesUrl}/jquery.validate.js"></script>
+<script type="text/javascript">jQuery(document).ready(function($){$("#validateForm").validate();});</script>
 </head>
 <body>
 
@@ -31,7 +33,7 @@
 	<section class="pageContent">
     	
         <div class="container">
-        <form method="POST" enctype="multipart/form-data" action="${questionMvcUrl}/upload">
+        <form method="POST" enctype="multipart/form-data" action="${questionMvcUrl}/upload" id="validateForm">
             <h1 class="pageTitle">Memorize question tool</h1>
             <input type="hidden" id="questionMvcUrl" value="${questionMvcUrl}" />
             <h3>Message : ${message}</h3>
@@ -39,11 +41,11 @@
             <div class="uploadSec marginTop10">
             	<div class="blockDiv">
                 	<div class="width50P floatLeft lineHeight30">File to upload:</div>
-                    <div class="width50P floatLeft fileField"><input type="file" name="file" id="file-select"><label for="file-select">Select File</label></div>
+                    <div class="width50P floatLeft fileField"><input type="file" class="required" name="file" id="file-select"><label for="file-select">Select File</label></div>
                     <div class="clear"></div>
                     
                     <div class="width50P floatLeft lineHeight30 marginTop10">Member Number:</div>
-                    <div class="width50P floatLeft marginTop10"><input type="text" name="memberNumber" value="1234"></div>
+                    <div class="width50P floatLeft marginTop10"><input type="text" name="memberNumber" class="required" value="1234"></div>
                     <div class="clear"></div>
                 </div>
             </div>
