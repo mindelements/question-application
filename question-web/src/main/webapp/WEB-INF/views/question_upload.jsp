@@ -19,8 +19,6 @@
 <script src="${resourcesUrl}/js/fm.checkator.jquery.js"></script>
 <script src="${resourcesUrl}/js/ladda.min.js"></script>
 <script src="${resourcesUrl}/js/spin.min.js"></script>
-<script src="${resourcesUrl}/jquery.validate.js"></script>
-<script type="text/javascript">jQuery(document).ready(function($){$("#validateForm").validate();});</script>
 </head>
 <body>
 <div class="layout" id="scroller">
