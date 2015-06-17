@@ -145,7 +145,7 @@
 
                 </div>
                 
-                <div class="button-demo"><div class="progress-demo textCenter"><button class="ladda-button" data-color="mint" data-style="expand-right" data-size="xs">RESULT</button></div></div>
+                <!--<div class="button-demo"><div class="progress-demo textCenter"><button class="ladda-button" data-color="mint" data-style="expand-right" data-size="xs">RESULT</button></div></div>-->
                 
             </div>
             </form>
