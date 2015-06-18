@@ -30,7 +30,10 @@
 	<section class="pageContent">
     	
         <div class="container">
+            <br/>
             <p>Please find below tools:</p>
+            <br/>
+            <br/>
             <ul>
                	<li><a href="${pageContext.request.contextPath}/app/question/welcome">Question Tool</a></li>
                 <li><a href="${pageContext.request.contextPath}/app/quiz/welcome">Quiz Tool</a></li>            <ul>
@@ -45,7 +48,12 @@
             -->
         </div>
         <div class="clear"></div>
-        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <footer>
         	Copyright &copy; 2015
         </footer>
