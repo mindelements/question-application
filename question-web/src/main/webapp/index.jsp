@@ -32,8 +32,6 @@
         <div class="container">
             <br/>
             <p>Please find below tools:</p>
-            <br/>
-            <br/>
             <ul>
                	<li><a href="${pageContext.request.contextPath}/app/question/welcome">Question Tool</a></li>
                 <li><a href="${pageContext.request.contextPath}/app/quiz/welcome">Quiz Tool</a></li>            <ul>
@@ -52,6 +50,15 @@
         <br/>
         <br/>
         <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        (c) support@mindelements.net
         <br/>
         <br/>
         <footer>
