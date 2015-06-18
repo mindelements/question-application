@@ -31,12 +31,18 @@
     	
         <div class="container">
             <p>Please find below tools:</p>
+            <ul>
+               	<li><a href="${pageContext.request.contextPath}/app/question/welcome">Question Tool</a></li>
+                <li><a href="${pageContext.request.contextPath}/app/quiz/welcome">Quiz Tool</a></li>            <ul>
+            </ul>
+            <!--
             <div class="blockDiv marginTop10 content" id="content-1">
             	<ul class="arrowList">
                 	<li><a href="${pageContext.request.contextPath}/app/question/welcome">Memorize</a></li>
                     <li><a href="${pageContext.request.contextPath}/app/quiz/welcome">Practice Question</a></li>
                 </ul>
             </div>
+            -->
         </div>
         <div class="clear"></div>
         
