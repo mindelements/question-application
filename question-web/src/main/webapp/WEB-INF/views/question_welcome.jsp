@@ -58,9 +58,9 @@ vlid("#validateForm").validate();
             
             <div class="blockDiv paddingTop50">
             	<h3>Templates:</h3>
-                <p><a href="/question-web/resources/memorize-this.xlsx">memorize-this.xlsx</a></p>
-                <p><a href="/question-web/resources/sample.xlsx">sample.xlsx</a></p>
-                <p><a href="/question-web/resources/sample-multi.xlsx">sample-multi.xlsx</a></p>
+                <p><a href="${resourcesUrl}/memorize-this.xlsx">memorize-this.xlsx</a></p>
+                <p><a href="${resourcesUrl}/sample.xlsx">sample.xlsx</a></p>
+                <p><a href="${resourcesUrl}/sample-multi.xlsx">sample-multi.xlsx</a></p>
             </div>
         </form>
         </div>
