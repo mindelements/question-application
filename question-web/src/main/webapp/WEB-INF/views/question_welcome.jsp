@@ -55,7 +55,11 @@ vlid("#validateForm").validate();
                 </div>
             </div>
             <div class="button-demo marginTop10"><div class="progress-demo textCenter"><button type="submit" class="ladda-button" data-color="mint" data-style="expand-right" data-size="xs">Upload</button></div></div>
-            
+       <br/>
+        Copy the link below and download the sample excel file on your browser.
+        <br/>
+        https://qa1-mindelements.rhcloud.com/question-web/resources/sample-multi.xlsx            
+        <br/>
             <div class="blockDiv paddingTop50">
             	<h3>Templates:</h3>
                 <p><a href="${resourcesUrl}/memorize-this.xlsx">memorize-this.xlsx</a></p>
