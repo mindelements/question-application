@@ -59,8 +59,9 @@
         <br/>
         <br/>
         <br/>
+        Copy the link below and download the sample excel file on your browser.
         <br/>
-        <br/>
+        https://qa1-mindelements.rhcloud.com/question-web/resources/sample-multi.xlsx
         <br/>
         <br/>        
         (c) support@mindelements.net
